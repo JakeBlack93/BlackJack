@@ -8,6 +8,7 @@ public class Game {
         Scanner scan = new Scanner(System.in);
         System.out.println("\n" + "Welcome to Blackjack. Please enter your name: ");
         String PlayerName = scan.nextLine();
+        int bust_score = 22;
 
 
         //Start Game logic
@@ -29,7 +30,7 @@ public class Game {
         System.out.println("Current Score: " + player.getScore());
 
 
-        while (player.getScore() < 22 ){
+        while (player.getScore() < bust_score ){
 
             System.out.println("Would you like to twist or stick?: ");
             String Choice = scan.nextLine();
@@ -48,7 +49,7 @@ public class Game {
 
         }
 
-        if (player.getScore() >= 22) {
+        if (player.getScore() >= bust_score) {
 
             System.out.println("BUST! Game Over. ");
 
@@ -67,7 +68,7 @@ public class Game {
 
 
 
-        while (dealer.getScore() < 22) {
+        while (dealer.getScore() < bust_score) {
 
             dealer.setScore(dealer.getScore() + cardDeck.Draw());
             System.out.println("Dealer Score: " + dealer.getScore());

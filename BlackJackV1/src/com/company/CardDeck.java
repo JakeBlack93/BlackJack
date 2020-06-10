@@ -6,7 +6,7 @@ public class CardDeck {
 
     static int[] cards = {
 
-            1, 2, 3, 4, 5, 6, 7, 8, 9, 10
+            2, 3, 4, 5, 6, 7, 8, 9, 10, 11
 
     };
 
@@ -14,7 +14,7 @@ public class CardDeck {
     public static int Draw(){
         int rnd1 = new Random().nextInt(cards.length);
 
-        while(rnd1 < 1) { //This while loop will prevent rnd1 being 0
+        while(rnd1 < 2) { //This while loop will prevent rnd1 being 0 or 1
 
             rnd1 = new Random().nextInt(cards.length);
         }
